@@ -25,12 +25,11 @@
     "lit": "^2.1.1"
   },
   "devDependencies": {
-    "@lrnwebcomponents/wikipedia-query": "^4.0.6",
-    "@lrnwebcomponents/meme-maker": "^4.0.6",
-    "@lrnwebcomponents/deduping-fix": "^4.0.0",
-    "patch-package": "6.4.7",
     "@babel/preset-env": "^7.15.6",
     "@custom-elements-manifest/analyzer": "^0.4.17",
+    "@lrnwebcomponents/deduping-fix": "^4.0.0",
+    "@lrnwebcomponents/meme-maker": "^4.0.6",
+    "@lrnwebcomponents/wikipedia-query": "^4.0.6",
     "@open-wc/building-rollup": "^1.10.0",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "next",
@@ -41,19 +40,20 @@
     "@web/rollup-plugin-html": "^1.10.1",
     "@web/rollup-plugin-import-meta-assets": "^1.0.7",
     "@web/test-runner": "^0.13.18",
+    "@webcomponents/webcomponentsjs": "2.6.0",
     "babel-plugin-template-html-minifier": "^4.1.0",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
+    "patch-package": "6.4.7",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.58.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-workbox": "^6.2.0",
-    "web-animations-js": "2.3.2",
-    "@webcomponents/webcomponentsjs": "2.6.0"
+    "web-animations-js": "2.3.2"
   },
   "keywords": [
     "web-components",
