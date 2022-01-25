@@ -1,0 +1,1 @@
+import{x as e,$ as t}from"./aa05e036.js";e(t`<button @click="${function(e){const t=document.createElement("user-ip");document.querySelector("#demo").appendChild(t)}}">Call the IP API</button>`,document.querySelector("#demo"));
