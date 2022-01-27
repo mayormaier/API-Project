@@ -18,17 +18,21 @@ export class UserIP extends LitElement {
     super();
     // default values
     this.ip = null;
+    this.location = 'Computing the Location...';
     // variables can be stored on "this" as the class we're working on is like a
     // Java or other Object Oriented Programming Language
     // so for this one, we're storing a reference to the API endpoint
     // so that if it ever changed it would be easier to update
-    this.ipLookUp = 'https://ip-fast.com/api/ip/?format=json&location=False';
+    this.ipLookUp = 'https://ip-fast.com/api/ip/?format=json&location=True';
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
       ip: { type: String, reflect: true },
+      country: { type: String, reflect: true },
+      city: { type: String, reflect: true },
+      location: { type: String, reflect: true },
     };
   }
 
@@ -78,7 +82,7 @@ export class UserIP extends LitElement {
       super.firstUpdated(changedProperties);
     }
     // go get an IP address based on the user generating a request
-    // to this cool, simple, annonymous IP returnings service
+    // to this cool, simple, anonymous IP returning service
     // sanity check that this wasn't set previously
     if (this.ip === null) {
       this.updateUserIP();
@@ -99,6 +103,9 @@ export class UserIP extends LitElement {
       })
       .then(data => {
         this.ip = data.ip;
+        // this.country = data.country;
+        // this.city = data.city;
+        this.location = `${data.city}, ${data.country}`;
         return data;
       });
   }
@@ -111,11 +118,11 @@ export class UserIP extends LitElement {
   static get styles() {
     return [
       css`
-        /* :host is a special selector meaning the stlyes to apply to the tag itself, like defaults */
+        /* :host is a special selector meaning the styles to apply to the tag itself, like defaults */
         :host {
           display: block;
         }
-        /* an unorder list is a ul tag */
+        /* an unordered list is a ul tag */
         ul {
           margin: 0 8px;
           list-style-type: square;
@@ -136,10 +143,12 @@ export class UserIP extends LitElement {
 
   // this serves very little purpose but at least we're rendering the info
   render() {
-    return html` <ul>
-      <li><strong class="ipaddress">IP address:</strong> ${this.ip}</li>
-      <li></li>
-    </ul>`;
+    return html` <p>IP Address: ${this.ip} -- Location: ${this.location}</p>
+      <p></p>
+      <ul>
+        <li><strong class="ipaddress">IP Address:</strong> ${this.ip}</li>
+        <li><strong class="location">Location</strong> ${this.location}</li>
+      </ul>`;
   }
 }
 
