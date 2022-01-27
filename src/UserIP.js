@@ -154,7 +154,7 @@ export class UserIP extends LitElement {
         <li><strong class="ipaddress">IP Address:</strong> ${this.ip}</li>
         <li><strong class="location">Location:</strong> ${this.location}</li>
         <li><strong class="city">City:</strong> ${this.city}</li>
-        <li><strong class="city">Country:</strong> ${this.country}</li>
+        <li><strong class="country">Country:</strong> ${this.country}</li>
       </ul>`;
   }
 }
