@@ -19,6 +19,8 @@ export class UserIP extends LitElement {
     // default values
     this.ip = null;
     this.location = 'Computing the Location...';
+    this.city = 'Computing the City...';
+    this.country = 'Computing the Country...';
     // variables can be stored on "this" as the class we're working on is like a
     // Java or other Object Oriented Programming Language
     // so for this one, we're storing a reference to the API endpoint
@@ -103,8 +105,8 @@ export class UserIP extends LitElement {
       })
       .then(data => {
         this.ip = data.ip;
-        // this.country = data.country;
-        // this.city = data.city;
+        this.country = `${data.country}`;
+        this.city = `${data.city}`;
         this.location = `${data.city}, ${data.country}`;
         return data;
       });
@@ -143,11 +145,16 @@ export class UserIP extends LitElement {
 
   // this serves very little purpose but at least we're rendering the info
   render() {
-    return html` <p>IP Address: ${this.ip} -- Location: ${this.location}</p>
+    return html` <p>
+        IP Address: ${this.ip} -- Location: ${this.location} -- City:
+        ${this.city} -- Country: ${this.country}
+      </p>
       <p></p>
       <ul>
         <li><strong class="ipaddress">IP Address:</strong> ${this.ip}</li>
-        <li><strong class="location">Location</strong> ${this.location}</li>
+        <li><strong class="location">Location:</strong> ${this.location}</li>
+        <li><strong class="city">City:</strong> ${this.city}</li>
+        <li><strong class="country">Country:</strong> ${this.country}</li>
       </ul>`;
   }
 }
