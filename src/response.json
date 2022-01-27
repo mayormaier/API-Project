@@ -1,0 +1,39 @@
+{
+    "events": [
+      {
+        "location": "Happy Valley Lauchbox",
+        "start_time": "0000-00-00T16:00:00Z",
+        "end_time": "0000-00-00T19:00:00Z",
+        "details": "IST 496: Independent Study",
+        "queue_position": "1"
+      },
+      {
+        "location": "E206 Westgate Building",
+        "start_time": "0000-00-00T19:30:00Z",
+        "end_time": "0000-00-00T20:45:00Z",
+        "details": "IST 413: User Engineering",
+        "queue_position": "2"
+      },
+      {
+        "location": "108 Wartik Lab",
+        "start_time": "0000-00-00T17:05:00Z",
+        "end_time": "0000-00-00T18:20:00Z",
+        "details": "IST 402: Micro Frontend Development",
+        "queue_position": "3"
+      },
+      {
+        "location": "112 Kern Building",
+        "start_time": "0000-00-00T18:35:00Z",
+        "end_time": "0000-00-00T19:50:00Z",
+        "details": "HM 208: History of Alcohol",
+        "queue_position": "4"
+      },
+      {
+        "location": "116 Earth & Engineering Sciences",
+        "start_time": "0000-00-00T20:05:00Z",
+        "end_time": "0000-00-00T21:20:00Z",
+        "details": "IST 440W: IST Capstone",
+        "queue_position": "5"
+      }
+    ]
+  }

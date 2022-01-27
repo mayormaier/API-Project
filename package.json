@@ -39,7 +39,7 @@
     "@web/dev-server-storybook": "^0.0.2",
     "@web/rollup-plugin-html": "^1.10.1",
     "@web/rollup-plugin-import-meta-assets": "^1.0.7",
-    "@web/test-runner": "^0.13.16",
+    "@web/test-runner": "^0.13.18",
     "@webcomponents/webcomponentsjs": "2.6.0",
     "babel-plugin-template-html-minifier": "^4.1.0",
     "deepmerge": "^4.2.2",
